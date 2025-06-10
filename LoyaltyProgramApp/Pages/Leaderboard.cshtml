@@ -1,0 +1,10 @@
+@page
+@model LeaderboardModel
+<h1>Top 10 Users</h1>
+<table>
+    <tr><th>Name</th><th>Points</th></tr>
+@foreach (var item in Model.Users)
+{
+    <tr><td>@item.Name</td><td>@item.Points</td></tr>
+}
+</table>
