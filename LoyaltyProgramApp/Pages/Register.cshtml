@@ -1,0 +1,11 @@
+@page
+@model RegisterModel
+<h1>Register</h1>
+<form method="post">
+    <input asp-for="Input.Name" placeholder="Full Name" /> <br />
+    <input asp-for="Input.Email" placeholder="Email" /> <br />
+    <input asp-for="Input.MobileNumber" placeholder="Mobile Number" /> <br />
+    <input asp-for="Input.Age" placeholder="Age" type="number" /> <br />
+    <button type="submit">Create</button>
+</form>
+<p>@Model.Message</p>
