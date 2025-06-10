@@ -10,7 +10,7 @@ This repository contains a minimal ASP.NET Core Razor Pages application that dem
 
 ## Running
 
-The project targets .NET 7.0. Use the .NET SDK to run the application:
+The project targets .NET 8.0. Use the .NET SDK to run the application:
 
 ```bash
 dotnet run --project LoyaltyProgramApp/LoyaltyProgramApp.csproj
