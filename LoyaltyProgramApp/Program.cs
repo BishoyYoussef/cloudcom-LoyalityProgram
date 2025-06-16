@@ -1,7 +1,4 @@
-namespace LoyaltyProgramApp;
-
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,18 +12,17 @@ app.UseStaticFiles();
 app.UseRouting();
 app.MapRazorPages();
 
-// Endpoint for one-time code redirect
 app.MapGet("/code/{code}", (string code) => Results.Redirect($"/Register?code={code}"));
 
 app.Run();
 
-class AppDbContext : DbContext
+public class AppDbContext : DbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
     public DbSet<User> Users => Set<User>();
 }
 
-class User
+public class User
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
